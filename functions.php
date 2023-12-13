@@ -16,6 +16,12 @@ function planty_config()
         'flex-height' => true,
         'flex-width' => true
     ));
+
+    register_nav_menus(
+        array(
+            'wp_planty_main_menu' => 'Main Menu'
+        )
+    );
 }
 add_action('after_setup_theme', 'planty_config', 0);
 
@@ -29,3 +35,15 @@ function remove_wp_block_library_css()
     //wp_dequeue_style('global-styles'); // Remove theme.json css
 }
 add_action('wp_enqueue_scripts', 'remove_wp_block_library_css', 100);
+
+
+function add_admin_link($items, $args)
+{
+    if (is_user_logged_in()) {
+        if ($args->theme_location == 'wp_planty_main_menu') {
+            $items = $items . '<li><a class="menu-items .admin" title="Admin" href="' . admin_url() . '">Admin</a></li>';
+        }
+    }
+    return $items;
+}
+add_filter('wp_nav_menu_items', 'add_admin_link', 10, 2);

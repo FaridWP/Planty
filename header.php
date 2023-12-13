@@ -23,14 +23,10 @@
         </div>
         <nav class="menu">
             <ul class="menu-items">
-                <li><a href="<?php echo esc_url(site_url('rencontre')); ?>">Nous Rencontrer</a></li>
-                <?php
-                if (is_user_logged_in()) {
-                    $admin_link  = esc_url(admin_url());
-                    echo '<li><a href="' . $admin_link . '">Admin</a></li>';
-                }
-                ?>
-                <li><a href="<?php echo esc_url(site_url('commander')); ?>">Commander</a></li>
+                <?php wp_nav_menu(array('theme_location' => 'wp_planty_main_menu', 'depth' => 0)); ?>
             </ul>
+            <div class="btn-header">
+                <a href="<?php echo esc_url(site_url('commander')); ?>">Commander</a>
+            </div>
         </nav>
     </header>

@@ -111,21 +111,21 @@ header {
 
 .menu {
     display: flex;
-    width: 100vw;
-    justify-content: flex-end;
+    /* width: 100vw; */
+    justify-content: flex-start;
 }
 
 .menu-items {
     display: flex;
-    justify-content: space-around;
     align-items: center;
 }
 
-.menu-items li:not(:last-child) {
+.menu-items li {
     padding-right: 60px;
     font-weight: 400;
+    background-color: var(--white);
 }
-.menu-items li:last-child a {
+.btn-header a {
     color: var(--white);
     background-color: var(--pink-1);
     padding: 30px 60px 31px 60px;
@@ -285,23 +285,27 @@ section.gouts {
     }
 
     .menu {
-        width: 100vw;
-        justify-content: right;
-    }
-
-    .menu-items {
         flex-direction: column;
         gap: 5px;
-    }
-    .menu-items {
-        justify-items: end;
+        align-content: right;
     }
 
-    .menu-items li:not(:last-child) {
+    a.admin {
+        justify-content: right;
+    }
+    .menu-items li {
+        /* margin-right: 5px; */
+        align-self: right;
         padding-right: 0px;
         font-weight: 400;
+        width: 100%;
     }
-    .menu-items li:last-child a {
+    ul.menu-items {
+        justify-content: right;
+        text-align: right;
+        width: 100%;
+    }
+    .btn-header a {
         color: var(--white);
         background-color: var(--pink-1);
         padding: 5px 30px 15px 30px;
