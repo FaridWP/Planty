@@ -145,14 +145,9 @@ footer {
 }
 
 /* ACCUEIL */
-.page-id-9 {
-    /* width: 100vw; */
-}
 section.hero {
     margin-top: 83px;
     width: 100vw;
-}
-.hero {
 }
 .hero-title {
     color: var(--green-1);
@@ -323,7 +318,7 @@ section.gouts {
     header {
         flex-direction: column;
         justify-content: center;
-        /* align-content: center; */
+        gap: 5px;
         min-height: 100px;
         padding-left: 0;
         padding-right: 0;
@@ -373,31 +368,46 @@ section.gouts {
         font-size: 28px;
     }
 
-    .introduction-text {
+    section.introduction {
+        width: 100%;
+        align-content: center;
+    }
+    section.introduction h3 {
+        color: var(--green-1);
+        margin-top: 60px;
+        width: 100%;
+        text-align: center;
+    }
+    section.introduction p {
+        font-size: 16px;
         width: 300px;
     }
 
-    .gallery1 {
-        margin-top: 20px;
-        max-width: 300px;
-        align-self: center;
+    .gouts {
+        align-content: center;
+    }
+
+    .gouts-text {
+        width: 300px;
+        font-size: 16px;
     }
     .gallery-home {
         margin: 0;
         justify-content: center;
     }
 
+    .avis {
+        padding-top: 20px;
+    }
     .avis-titre {
         text-align: left;
         font-size: 28px;
     }
     .avis-text {
-        width: 196px;
+        width: 150px;
         text-align: left;
     }
     .avis-container {
-        display: flex;
         gap: 80px;
-        padding-bottom: 60px;
     }
 }
