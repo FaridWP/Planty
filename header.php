@@ -21,6 +21,7 @@
             }
             ?>
         </div>
+
         <nav class="menu">
             <ul class="menu-items">
                 <?php wp_nav_menu(array('theme_location' => 'wp_planty_main_menu', 'depth' => 0)); ?>
